@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Furlenco</h1>
+<a href="/categories">My categories</a>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = callApi('/home')">
+Click me to add home page.</button>
+
+<p id="demo"></p>
+
+<script>
+function callApi(a){
+ alert(a);
+}
+</script>
+</body>
+</html> 

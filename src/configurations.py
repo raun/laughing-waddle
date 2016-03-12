@@ -25,6 +25,8 @@ class Development(Base):
     DEBUG = True
     TESTING = False
 
+    elastic_search_url = "http://127.0.0.1:9200/furlenco_v5/"
+
 
 class Testing(Development):
     TESTING = True

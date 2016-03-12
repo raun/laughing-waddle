@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Categories</h1>
+<a href="/packages">My Packages</a>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = callApi('/categories')">
+Click me to add Categories page.</button>
+
+<p id="demo"></p>
+
+<script>
+function callApi(a){
+ alert(a);
+}
+</script>
+</body>
+</html> 
