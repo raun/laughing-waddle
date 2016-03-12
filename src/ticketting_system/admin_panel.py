@@ -20,3 +20,8 @@ class TicketAdmin(ModelView):
 	can_delete = False
 
 admin.add_view(TicketAdmin(Ticket))
+
+class StationAdmin(ModelView):
+	can_delete = False
+
+admin.add_view(StationAdmin(Station))

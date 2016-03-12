@@ -8,13 +8,20 @@ from exceptions import ValidationException
 class Station(db.Document):
 	id = db.StringField(required=True)
 	name = db.StringField(required=True)
-	code = db.StringField(required=True)
+	code = db.StringField(required=True, unique=True)
 
 	def __repr__(self):
 		return self.id
 
 	def __str__(self):
 		return str(self.id + " : " + self.code)
+
+	def to_json(self):
+		return {
+			'id' : self.id,
+			'name' : self.name,
+			'code' : self.code
+		}
 
 class Couch(db.Document):
 	id = db.StringField(required=True)
